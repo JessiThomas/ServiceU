@@ -1,0 +1,38 @@
+<div class="row text-center">     
+     <%=image_tag("Logo6.png", alt: "Logo", class: "logo", position: "center")%>
+</div>
+<br>
+
+
+<div class="well home-well">
+<div class="col-md-6 center-block">
+           <%=link_to jobs_path do %>
+           <h4><%= link_to 'Jobs', jobs_path %></h4>
+           <% end %>
+   </div>
+   </div>
+
+   <div class="well home-well">
+          <%=link_to forums_path do %>
+          <h4><%= link_to 'Forum', forums_path %></h4>
+          <% end %>
+  </div>
+   <div class="well home-well">
+       <%=link_to events_path do %>
+       <h4><%= link_to 'Events', events_path %></h4>
+       <% end %>
+  </div>
+    <div class="well home-well">
+        <%=link_to inventories_path do %>
+        <h4><%= link_to 'Buy/Sell', inventories_path %></h4>
+       <% end %>
+  </div>
+    <div class="well home-well">
+       <%=link_to anons_path do %>
+       <h4><%= link_to 'Anonymous Forum', anons_path %></h4>
+       <% end %>
+  </div>
+   </div>
+</div>
+</div>
+

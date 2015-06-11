@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+<div class="well home-well">
+<div class="row">
+<div class="col-md-6-centered">
+<div class="center">
+<h1><%= @forum.title %></h1>
+<p class="text-muted">Created by <%= @forum.user.username %></p>
+<%= @forum.body %>
+
+<br>
+<br>
+<%= link_to 'Back', forums_path, class: "btn btn-success" %>
+<% if current_user.id == @forum.user.id %>
+<%= link_to 'Edit', edit_forum_path(@forum), class: "btn btn-warning" %>
+<% end %>
+  </div>
+     </div>
+     </div>
+     </div>
+<br>
+
+<%= render partial: "comments/comments", locals: {commentable: @forum} %>
+
+<%= render partial: "comments/form", locals: {commentable: @forum} %>

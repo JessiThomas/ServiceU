@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+  <div class="pull-right">
+<%= link_to 'List a new job!', new_job_path, class: "btn btn-success" %>
+  </div>
+<div class="well home-well">
+<div class="row">
+<div class="col-md-6-centered">
+<div class="center">
+<h1 class="page-header">Posted Jobs</h1>
+      <% @jobs.each do |job| %>
+  <h3><%= link_to job.title, job %></h3>
+    <% end %>
+<br>
+</div>
+</div>
+</div>
+</div>
+    <%= link_to 'Home', root_path, class: "btn btn-info" %>
